@@ -19,24 +19,49 @@
 			"file": "index.php",
 			"settings":
 			{
-				"buffer_size": 90,
+				"buffer_size": 625,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "index.html",
+			"contents": "=== PARTIAL PAYMENTS ====\n\n			 - payments -\nID	 Due	 Cheque	 Bill	 Remaining	Email						Booking Date		Name\n32	 £390 	 £-   	 £156 	 £234 		em509@cam.ac.uk				13/02/2014 11:04 pm	E. Martin\n48	 £478 	 £-   	 £400 	 £78 		dav26@cam.ac.uk				13/02/2014 11:09 pm	\n50	 £694 	 £606 	 £78 	 £10 		hm437@cam.ac.uk				13/02/2014 11:10 pm	H. McKellar\n62	 £468 	 £-   	 £78 	 £390 		celm3@cam.ac.uk				13/02/2014 11:14 pm	C-E.L. Martin\n126	 £390 	 £320 	 £-   	 £70 		rachel.hesketh15@gmail.com	13/02/2014 11:32 pm	\n159	 £624 	 £156 	 £156 	 £312 		otc23@cam.ac.uk				15/02/2014 8:12 pm	\n180	 £624 	 £390 	 £156 	 £78 		mhf23@cam.ac.uk				15/02/2014 8:17 pm	\n324	 £702 	 £-   	 £78 	 £624 	 	td316@cam.ac.uk				15/02/2014 9:34 pm	\n338	 £624 	 £-   	 £78 	 £546 	 	stet2@cam.ac.uk				15/02/2014 9:51 pm	\n562	 £1,014  £708 	 £-   	 £306 	 	lrd25@cam.ac.uk				20/02/2014 8:31 pm	Lydia Doster\n\n\n=== NON-PAYMENTS ====\n\n			 - payments -\nID	 Due	 Cheque	 Bill	 Remaining	Email						Booking Date		Name\n173	 £78 	 £-   	 £-   	 £78 	 	ecm44@cam.ac.uk				15/02/2014 8:17 pm	\n249	 £78 	 £-   	 £-   	 £78 	 	apddawson@gmail.com			15/02/2014 8:27 pm	\n325	 £156 	 £-   	 £-   	 £156 	 	pg362@cam.ac.uk				15/02/2014 9:34 pm	\n573	 £78 	 £-   	 £-   	 £78 	 	st569@cam.ac.uk				21/02/2014 6:13 pm	Sofia Thuru\n600	 £78 	 £-   	 £-   	 £78 	 	nsp26@cam.ac.uk				21/02/2014 7:41 pm	N Patel\n605	 £78 	 £-   	 £-   	 £78 	 	ha338@cam.ac.uk				21/02/2014 7:46 pm	H Aiked\n606	 £78 	 £-   	 £-   	 £78 	 	jem208@cam.ac.uk			21/02/2014 7:47 pm	J Martin\n670	 £1,560  £-   	 £-   	 £1,560  	lrd25@cam.ac.uk				26/02/2014 9:11 am	Lydia Doster\n671	 £546 	 £-   	 £-   	 £546 	 	lrd25@cam.ac.uk				26/02/2014 9:14 am	Lydia Doster\n678	 £78 	 £-   	 £-   	 £78 	 	sy326@cam.ac.uk				27/02/2014 8:41 pm	S. Ylivuori\n721	 £48 	 £-   	 £-   	 £48 	 	fionalifung@gmail.com		19/03/2014 6:20 pm	Fiona Stewart\n\n",
 			"settings":
 			{
-				"buffer_size": 6,
+				"buffer_size": 1860,
 				"line_ending": "Unix",
-				"name": "AFAEFW"
+				"name": "=== PARTIAL PAYMENTS ===="
+			}
+		},
+		{
+			"contents": "E. Martin	em509@cam.ac.uk (ID: 32) has paid £156.00 out of the £390.00 due\ndav26@cam.ac.uk (ID: 48) has paid £400.00 out of the £478.00 due\nH. McKellar	hm437@cam.ac.uk (ID: 50) has paid £684.00 out of the £694.00 due\nC-E.L. Martin	celm3@cam.ac.uk (ID: 62) has paid £78.00 out of the £468.00 due\nrachel.hesketh15@gmail.com (ID: 126) has paid £320.00 out of the £390.00 due\notc23@cam.ac.uk (ID: 159) has paid £312.00 out of the £624.00 due\nmhf23@cam.ac.uk (ID: 180) has paid £546.00 out of the £624.00 due\ntd316@cam.ac.uk (ID: 324) has paid £78.00 out of the £702.00 due\nstet2@cam.ac.uk (ID: 338) has paid £78.00 out of the £624.00 due\n\necm44@cam.ac.uk (ID: 173) has paid £0.00 out of the £78.00 due\napddawson@gmail.com (ID: 249) has paid £0.00 out of the £78.00 due\npg362@cam.ac.uk (ID: 325) has paid £0.00 out of the £156.00 due\nSofia Thuru	st569@cam.ac.uk (ID: 573) has paid £0.00 out of the £78.00 due\nN Patel	nsp26@cam.ac.uk (ID: 600) has paid £0.00 out of the £78.00 due\nH Aiked	ha338@cam.ac.uk (ID: 605) has paid £0.00 out of the £78.00 due\nJ Martin	jem208@cam.ac.uk (ID: 606) has paid £0.00 out of the £78.00 due\nS. Ylivuori	sy326@cam.ac.uk (ID: 678) has paid £0.00 out of the £78.00 due\nFiona Stewart	fionalifung@gmail.com (ID: 721) has paid £0.00 out of the £48.00 due",
+			"settings":
+			{
+				"buffer_size": 1276,
+				"line_ending": "Unix",
+				"name": "E. Martin	em509@cam.ac.uk (ID: 32) has paid £156.0"
+			}
+		},
+		{
+			"file": "/home/christoph/eje/var/www/wp-content/themes/eje_2014/functions.php",
+			"settings":
+			{
+				"buffer_size": 24654,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/etc/php5/apache2/php.ini",
+			"settings":
+			{
+				"buffer_size": 69641,
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "credentials.php",
 			"settings":
 			{
-				"buffer_size": 75,
+				"buffer_size": 105,
 				"line_ending": "Unix"
 			}
 		}
@@ -76,6 +101,9 @@
 	},
 	"file_history":
 	[
+		"/etc/php5/apache2/conf.d/20-xdebug.ini",
+		"/etc/php/apache2/php.ini",
+		"/home/christoph/dev/guestlist/index.html",
 		"/home/christoph/Templates/HTML Document.html",
 		"/etc/apache2/sites-available/guestlist.conf",
 		"/var/www/guestlist/index.html",
@@ -90,7 +118,7 @@
 	],
 	"find":
 	{
-		"height": 25.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -104,15 +132,27 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"donation",
+			"(\\d+)\\t £([\\d,]+).00 \\t([^ \\t]+)\\t([^\\t]*\\t)(\\d+)",
+			"(\\d+)\\t £([\\d,]+).00 \\t([^ \\t]+)\\t([^\\t]*)\\t(\\d+)",
+			"\\t(\\d\\d/\\d\\d/\\d\\d\\d\\d)",
+			".00",
+			"£",
+			"Zend",
+			"errors",
 			"get_final",
 			"gedit"
 		],
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": false,
+		"regex": true,
 		"replace_history":
 		[
+			"\\4\\3 (ID: \\1) has paid £\\5.00 out of the £\\2.00 due",
+			"\\4 \\3 (ID: \\1) has paid £\\5.00 out of the \\2 due",
+			"\\t\\t\\t\\t\\1",
+			"",
 			"subl"
 		],
 		"reverse": false,
@@ -124,7 +164,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -152,7 +192,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -161,20 +201,76 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 90,
+						"buffer_size": 625,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								20,
-								20
+								234,
+								234
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1860,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1860,
+								1860
+							]
+						],
+						"settings":
+						{
+							"auto_name": "=== PARTIAL PAYMENTS ====",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1276,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1276,
+								1276
+							]
+						],
+						"settings":
+						{
+							"auto_name": "E. Martin	em509@cam.ac.uk (ID: 32) has paid £156.0",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -184,49 +280,76 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "index.html",
+					"buffer": 4,
+					"file": "/home/christoph/eje/var/www/wp-content/themes/eje_2014/functions.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6,
+						"buffer_size": 24654,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6,
-								6
+								15431,
+								15431
 							]
 						],
 						"settings":
 						{
-							"auto_name": "AFAEFW",
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.x": 301.0,
+						"translation.y": 7043.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "credentials.php",
+					"buffer": 5,
+					"file": "/etc/php5/apache2/php.ini",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 75,
+						"buffer_size": 69641,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								75,
-								75
+								2894,
+								2894
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 660.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "credentials.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 105,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								105,
+								105
 							]
 						],
 						"settings":
@@ -237,7 +360,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -281,7 +404,7 @@
 	"project": "guestlist.sublime-project",
 	"replace":
 	{
-		"height": 46.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":
