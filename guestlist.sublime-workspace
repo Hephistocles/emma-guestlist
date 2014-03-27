@@ -3,6 +3,7 @@
 	{
 		"selected_items":
 		[
+<<<<<<< HEAD
 			[
 				"ticket",
 				"ticket_id"
@@ -55,6 +56,8 @@
 				"res",
 				"result_cache"
 			]
+=======
+>>>>>>> 3e9a59ac32124eaa87d8b9c34554ccba1c59e370
 		]
 	},
 	"buffers":
@@ -71,6 +74,7 @@
 			"file": "index.php",
 			"settings":
 			{
+<<<<<<< HEAD
 				"buffer_size": 6348,
 				"line_ending": "Windows"
 			}
@@ -91,15 +95,33 @@
 				"buffer_size": 941,
 				"line_ending": "Windows",
 				"name": "<?php"
+=======
+				"buffer_size": 90,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 6,
+				"line_ending": "Unix",
+				"name": "AFAEFW"
+>>>>>>> 3e9a59ac32124eaa87d8b9c34554ccba1c59e370
 			}
 		},
 		{
 			"file": "credentials.php",
 			"settings":
 			{
+<<<<<<< HEAD
 				"buffer_size": 105,
 				"line_ending": "Windows",
 				"name": "<?php"
+=======
+				"buffer_size": 75,
+				"line_ending": "Unix"
+>>>>>>> 3e9a59ac32124eaa87d8b9c34554ccba1c59e370
 			}
 		}
 	],
@@ -138,10 +160,13 @@
 	},
 	"file_history":
 	[
+<<<<<<< HEAD
 		"/C/inetpub/wwwroot/guest/codegen.php",
 		"/C/Program Files (x86)/PHP/v5.4/php.ini",
 		"/C/inetpub/wwwroot/guest/index.html",
 		"/C/inetpub/wwwroot/guest/credentials.php",
+=======
+>>>>>>> 3e9a59ac32124eaa87d8b9c34554ccba1c59e370
 		"/home/christoph/Templates/HTML Document.html",
 		"/etc/apache2/sites-available/guestlist.conf",
 		"/var/www/guestlist/index.html",
@@ -156,7 +181,11 @@
 	],
 	"find":
 	{
+<<<<<<< HEAD
 		"height": 43.0
+=======
+		"height": 25.0
+>>>>>>> 3e9a59ac32124eaa87d8b9c34554ccba1c59e370
 	},
 	"find_in_files":
 	{
@@ -170,6 +199,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+<<<<<<< HEAD
 			"@cam.ac.uk",
 			"\\n",
 			"@cam.ac.uk",
@@ -179,12 +209,15 @@
 			"@cam.ac.uk",
 			"Arc",
 			"error",
+=======
+>>>>>>> 3e9a59ac32124eaa87d8b9c34554ccba1c59e370
 			"get_final",
 			"gedit"
 		],
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
+<<<<<<< HEAD
 		"regex": true,
 		"replace_history":
 		[
@@ -193,6 +226,11 @@
 			"",
 			"\\1",
 			"",
+=======
+		"regex": false,
+		"replace_history":
+		[
+>>>>>>> 3e9a59ac32124eaa87d8b9c34554ccba1c59e370
 			"subl"
 		],
 		"reverse": false,
@@ -241,24 +279,40 @@
 					"semi_transient": false,
 					"settings":
 					{
+<<<<<<< HEAD
 						"buffer_size": 6348,
+=======
+						"buffer_size": 90,
+>>>>>>> 3e9a59ac32124eaa87d8b9c34554ccba1c59e370
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
+<<<<<<< HEAD
 								6304,
 								6304
+=======
+								20,
+								20
+>>>>>>> 3e9a59ac32124eaa87d8b9c34554ccba1c59e370
 							]
 						],
 						"settings":
 						{
+<<<<<<< HEAD
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 181.0,
+=======
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+>>>>>>> 3e9a59ac32124eaa87d8b9c34554ccba1c59e370
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -266,27 +320,48 @@
 				},
 				{
 					"buffer": 2,
+<<<<<<< HEAD
 					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 14636,
+=======
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6,
+>>>>>>> 3e9a59ac32124eaa87d8b9c34554ccba1c59e370
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
+<<<<<<< HEAD
 								0,
 								14636
+=======
+								6,
+								6
+>>>>>>> 3e9a59ac32124eaa87d8b9c34554ccba1c59e370
 							]
 						],
 						"settings":
 						{
+<<<<<<< HEAD
 							"auto_name": "£88.00 	vd248	13/02/2014 23:01	V. D'Arcy",
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 5767.0,
+=======
+							"auto_name": "AFAEFW",
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+>>>>>>> 3e9a59ac32124eaa87d8b9c34554ccba1c59e370
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -294,6 +369,7 @@
 				},
 				{
 					"buffer": 3,
+<<<<<<< HEAD
 					"file": "Ticket.php",
 					"semi_transient": false,
 					"settings":
@@ -323,31 +399,49 @@
 				},
 				{
 					"buffer": 4,
+=======
+>>>>>>> 3e9a59ac32124eaa87d8b9c34554ccba1c59e370
 					"file": "credentials.php",
 					"semi_transient": false,
 					"settings":
 					{
+<<<<<<< HEAD
 						"buffer_size": 105,
+=======
+						"buffer_size": 75,
+>>>>>>> 3e9a59ac32124eaa87d8b9c34554ccba1c59e370
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
+<<<<<<< HEAD
 								78,
 								78
+=======
+								75,
+								75
+>>>>>>> 3e9a59ac32124eaa87d8b9c34554ccba1c59e370
 							]
 						],
 						"settings":
 						{
+<<<<<<< HEAD
 							"auto_name": "<?php",
+=======
+>>>>>>> 3e9a59ac32124eaa87d8b9c34554ccba1c59e370
 							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+<<<<<<< HEAD
 					"stack_index": 4,
+=======
+					"stack_index": 2,
+>>>>>>> 3e9a59ac32124eaa87d8b9c34554ccba1c59e370
 					"type": "text"
 				}
 			]
@@ -355,7 +449,11 @@
 	],
 	"incremental_find":
 	{
+<<<<<<< HEAD
 		"height": 26.0
+=======
+		"height": 25.0
+>>>>>>> 3e9a59ac32124eaa87d8b9c34554ccba1c59e370
 	},
 	"input":
 	{
@@ -391,7 +489,11 @@
 	"project": "guestlist.sublime-project",
 	"replace":
 	{
+<<<<<<< HEAD
 		"height": 80.0
+=======
+		"height": 46.0
+>>>>>>> 3e9a59ac32124eaa87d8b9c34554ccba1c59e370
 	},
 	"save_all_on_build": true,
 	"select_file":
