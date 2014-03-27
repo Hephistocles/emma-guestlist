@@ -7,7 +7,6 @@ class Ticket {
 	public $ticket_id;
 	// public $guest_name;
 	// public $ticket_type;
-
 	function __construct($code) {
 		$i = func_num_args();
 		$a = func_get_args();

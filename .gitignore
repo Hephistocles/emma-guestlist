@@ -1,2 +1,4 @@
-credentials.php
+/credentials.php
 *.sublime-*
+/vendor/*
+/composer.lock
