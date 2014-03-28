@@ -40,16 +40,16 @@ class TicketTest extends PHPUnit_Framework_TestCase {
     	$this->assertEquals('O:6:"Ticket":4:{s:10:"booking_id";i:50;s:10:"ticket_num";i:5;s:11:"ticket_type";i:2;s:10:"guest_name";s:13:"Finbarr Leacy";}', serialize($ticket));
     }
     function testTicketBarcode() {
-    	// try {
+    	try {
 	    	$code = serialize($ticket = new Ticket(50, 2, 5));
 	    	$drawer = new Dinesh\Barcode\DNS2D();
 	    	$drawer->setStorPath("/home/christoph/dev/guestlist/test/output");
 	    	$svg = $drawer->getBarcodePNGPath($code, "QRCODE", 50, 50, "test");
 	    	echo "here";
 	    	echo $svg;
-	    // } catch (Exception $e) {
-	    // 	$this->fail($e->getMessage());
-	    // }
+	    } catch (Exception $e) {
+	    	$this->fail($e->getMessage());
+	    }
     	// TODO: actually test the result. All I know here is that no errors have been thrown!
     }
  
