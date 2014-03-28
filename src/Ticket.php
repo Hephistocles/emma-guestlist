@@ -73,5 +73,9 @@ class Ticket {
 				$this->ticket_num,
 			));
 	}
+
+	public function get_qr_code() {
+		
+	}
 }
 ?>

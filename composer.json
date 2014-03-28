@@ -1,5 +1,15 @@
 {
+
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/hephistocles/barcode"
+        }
+    ],
     "require-dev": {
         "phpunit/phpunit": "*"
+    },
+    "require": {
+    	"dinesh/barcode": "dev-hephistocles"
     }
 }

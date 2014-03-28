@@ -3,6 +3,7 @@
 <title>Bookings</title>
 </head>
 <body>
+<?php echo phpinfo(); ?>
 <h1>Bookings:</h1>
 <?php
 	$result_cache = array();
