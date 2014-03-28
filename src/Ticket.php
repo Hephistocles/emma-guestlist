@@ -65,12 +65,13 @@ class Ticket {
 		}
 	}
 
-	// public function encode() {
-	// 	return implode(Ticket::CODE_SEPARATOR, array(
-	// 			Ticket::CODE_PREFIX,
-	// 			$this->booking_id,
-	// 			$this->ticket_id,
-	// 		));
-	// }
+	public function get_code() {
+		return implode(Ticket::CODE_SEPARATOR, array(
+				Ticket::CODE_PREFIX,
+				$this->booking_id,
+				$this->ticket_type,
+				$this->ticket_num,
+			));
+	}
 }
 ?>
