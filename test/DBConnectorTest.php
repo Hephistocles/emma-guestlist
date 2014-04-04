@@ -1,11 +1,13 @@
 <?php
 
+require_once "../credentials.php"; 
 require_once dirname(__FILE__) . '/../src/DBConnector.php';
 
 class DBConnectorTest extends PHPUnit_Framework_TestCase {
 	function canConnect() {
 		try {
-			$conn = new DBConnector();
+			global $dbhost,$dbuser,$dbpass,$dbname;
+			$conn = new DBConnector($dbhost,$dbuser,$dbpass,$dbname);
 		} catch (Exception $error) {
 			$this->fail($error->getMessage());
 		}
@@ -55,6 +57,16 @@ class DBConnectorTest extends PHPUnit_Framework_TestCase {
 		$this->assertEquals('chris', $array[1]['name']);
 		$this->assertEquals(20, $array[0]['age']);
 		$this->assertEquals(21, $array[1][1]);
+	}
+
+	function testSetup() {
+		$conn = $this->canConnect();
+		$conn->exec("../src/setup.sql");
+		$conn->exec("../src/defaults.sql");
+	}
+	function testTeardown() {
+		$conn = $this->canConnect();
+		// $conn->exec("../src/teardown.sql");
 	}
 }
 

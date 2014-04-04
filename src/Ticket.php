@@ -21,19 +21,8 @@ class Ticket {
 		$a = func_get_args();
 
 		switch ($i) {
-			case 1:
-				$components = explode(Ticket::CODE_SEPARATOR, $a[0]);
-				// discard prefix - components[0]
-				$this->booking_id = $components[1];
-				$this->ticket_type = $components[2];
-				$this->ticket_num = $components[3];
-				$this->lookup_data();
-				break;
-			case 3:
-				$this->booking_id = $a[0];
-				$this->ticket_type = $a[1];
-				$this->ticket_num = $a[2];
-				$this->lookup_data();
+			case 2:
+				$this->decode($a[0], $a[1]);
 				break;
 			case 4:
 				$this->booking_id = $a[0];
@@ -42,13 +31,12 @@ class Ticket {
 				$this->guest_name = $a[3];
 				break;
 			default:
-				throw new InvalidArgumentException("Requires 1, 2 or 4 arguments (see doc)");
+				throw new InvalidArgumentException("Requires 2 or 4 arguments (see doc)");
 				break;
 		}
 	}
 
-	private function lookup_data() {
-		$conn = new DBConnector();
+	private function lookup_data($conn) {
 		if ($this->booking_id == null || $this->ticket_num == null) {
 			throw new Exception("Ticket not sufficiently initialised to infer remaining data");
 		}
@@ -64,18 +52,24 @@ class Ticket {
 			$this->guest_name = $tickets[$this->ticket_type][$this->ticket_num]["attendee_name"];
 		}
 	}
+	
+	// NOTE: encode and decode can be overriden to provide different code formats
+	public function decode($code, $conn) {
+		$components = explode(Ticket::CODE_SEPARATOR, $code);
+		// discard prefix - components[0]
+		$this->booking_id = intval($components[1]);
+		$this->ticket_type = intval($components[2]);
+		$this->ticket_num = intval($components[3]);
+		$this->lookup_data($conn);
+	}
 
-	public function get_code() {
+	public function encode() {
 		return implode(Ticket::CODE_SEPARATOR, array(
 				Ticket::CODE_PREFIX,
 				$this->booking_id,
 				$this->ticket_type,
 				$this->ticket_num,
 			));
-	}
-
-	public function get_qr_code() {
-		
 	}
 }
 ?>
