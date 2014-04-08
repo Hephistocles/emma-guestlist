@@ -63,10 +63,7 @@ class DBConnectorTest extends PHPUnit_Framework_TestCase {
 		$conn = $this->canConnect();
 		$conn->exec("../src/setup.sql");
 		$conn->exec("../src/defaults.sql");
-	}
-	function testTeardown() {
-		$conn = $this->canConnect();
-		// $conn->exec("../src/teardown.sql");
+		$conn->exec("../src/teardown.sql");
 	}
 }
 

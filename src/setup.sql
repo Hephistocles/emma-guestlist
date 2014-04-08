@@ -3,7 +3,9 @@ CREATE TABLE IF NOT EXISTS cl_bookers
 	 booker_name varchar(50) NOT NULL,
 	 booker_email varchar(100) NOT NULL,
 	 booker_wp_user_id int(11),
-	 PRIMARY KEY (booker_id));
+	 PRIMARY KEY (booker_id),
+	 UNIQUE KEY (booker_email),
+	 UNIQUE KEY (booker_wp_user_id));
 
 CREATE TABLE IF NOT EXISTS cl_ticket_types 
 	(ticket_type_id int(11) NOT NULL AUTO_INCREMENT,
