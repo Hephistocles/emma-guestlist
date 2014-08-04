@@ -3,8 +3,14 @@
 <title>Bookings</title>
 </head>
 <body>
-<?php echo phpinfo(); ?>
-<h1>Bookings:</h1>
+<?php 
+
+echo phpinfo();
+
+ ?>
+<h1>Bookings: </h1>
+
+New Content?
 <?php
 	$result_cache = array();
 	if (isset($_GET['d'])) {
@@ -15,6 +21,8 @@
 		if ($connection->connect_errno > 0) {
 		    die ('Unable to connect to database [' . $connection->connect_error . ']');
 		}
+
+
 
 		$d = strval(intval($_GET['d']));
 		$sql = "SELECT * FROM eje2014_em_bookings LIMIT 0 , " . $d;
