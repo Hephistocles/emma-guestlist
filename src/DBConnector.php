@@ -5,10 +5,13 @@ class DBConnector {
 	private $latest_result;
 	function __construct($dbhost,$dbuser,$dbpass,$dbname) {
 		$this->connection = new mysqli($dbhost, $dbuser, $dbpass, $dbname, 3306);
-	
+		$this->connection->set_charset("utf8");
 		if ($this->connection->connect_errno > 0) {
 			throw new Exception ('Unable to connect to database [' . $connection->connect_error . ']');
 		}
+	}
+	function escape($unescaped_string) {
+		return $this->connection->escape_string($unescaped_string);
 	}
 	/**
 	 * Execute a given SQL script directly on the command line
@@ -16,8 +19,13 @@ class DBConnector {
 	 */
 	function exec($script_location) {
 		$commands = file_get_contents($script_location);
+		$this->multi_query($commands);
+	}
+	function insert_id() {
+		return $this->connection->insert_id;
+	}
+	function multi_query($commands) {
 		$i = 0; 
-		
 		if ($this->connection->multi_query($commands)) { 
 			do { 
 				$i++; 

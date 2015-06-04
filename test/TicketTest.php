@@ -50,6 +50,7 @@ class TicketTest extends PHPUnit_Framework_TestCase {
 	    	$drawer = new Dinesh\Barcode\DNS2D();
 	    	$drawer->setStorPath("/home/christoph/dev/guestlist/test/output/");
             // NOTE: Smaller QR codes are faster to scan, so serializing a PHP object is probs not the best way forward
+            // TODO: test that the file is correctly created, and delete file
 	    	$path = $drawer->getBarcodePNGPath($code, "QRCODE", 50, 50, $ticket->encode());
 	    } catch (Exception $e) {
 	    	$this->fail($e->getMessage());

@@ -11,6 +11,7 @@ CREATE TABLE IF NOT EXISTS cl_ticket_types
 	(ticket_type_id int(11) NOT NULL AUTO_INCREMENT,
 	 ticket_name varchar(50) NOT NULL,
 	 ticket_price DECIMAL(10,2) NOT NULL,
+	 meta varchar(100),
 	 PRIMARY KEY (ticket_type_id));
 
 CREATE TABLE IF NOT EXISTS cl_ticket_status 
@@ -29,11 +30,22 @@ CREATE TABLE IF NOT EXISTS cl_guestlist
 	 status_id int(11) NOT NULL, 
 	 booker_id int(11) NOT NULL, 
 	 ticket_type_id int(11) NOT NULL, 
-	 ticket_meta longtext NOT NULL, 
+	 booking_date timestamp NOT NULL,
+	 payment_method_id int(11) NOT NULL, 
+	 ticket_meta longtext, 
 	 PRIMARY KEY (ticket_id),
 	 FOREIGN KEY (booker_id) REFERENCES cl_bookers(booker_id),
+	 FOREIGN KEY (payment_method_id) REFERENCES cl_payment_methods(payment_method_id),
 	 FOREIGN KEY (ticket_type_id) REFERENCES cl_ticket_types(ticket_type_id),
 	 FOREIGN KEY (status_id) REFERENCES cl_ticket_status(status_id));
+
+CREATE TABLE IF NOT EXISTS cl_ticket_addons
+	(addon_id int(11) NOT NULL AUTO_INCREMENT,
+	 ticket_id int(11) NOT NULL,
+	 addon_name varchar(50) NOT NULL,
+	 addon_price DECIMAL(10,2) NOT NULL,
+	 PRIMARY KEY (addon_id),
+	 FOREIGN KEY (ticket_id) REFERENCES cl_guestlist(ticket_id));
 
 CREATE TABLE IF NOT EXISTS cl_transactions 
 	(transaction_id int(11) NOT NULL AUTO_INCREMENT,
