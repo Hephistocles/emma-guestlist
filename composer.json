@@ -1,16 +1,9 @@
 {
 
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/hephistocles/barcode"
-        }
-    ],
     "require-dev": {
         "phpunit/phpunit": "*"
     },
     "require": {
-	"tecnick.com/tcpdf": "dev-master",
-    	"dinesh/barcode": "dev-hephistocles"
+	"tecnick.com/tcpdf": "dev-master"
     }
 }

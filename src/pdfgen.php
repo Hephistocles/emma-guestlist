@@ -83,14 +83,19 @@ function fiveChar($i) {
 function ticket_type($id) {
 	switch ($id) {
 		case 2:
-		case 7:
+		case 3:
+		case 4:
 		case 8:
-		case 11:
 			return "Queue Jump";
 			break;
 		
+		case 1:
+		case 5:
+		case 6:
+		case 7:
+			return "Standard"
 		default:
-			return "Standard";
+			return "Unknown";
 			break;
 	}
 }
@@ -156,5 +161,7 @@ $pdf->SetAutoPageBreak(false);
 
 
 //Close and output PDF document
-$pdf->Output('test.pdf', 'F');
+// $pdf->Output('test.pdf', 'F');
+$pdf->Output(__DIR__ . '/test.pdf', 'F');
+
 ?>

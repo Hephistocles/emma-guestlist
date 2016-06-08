@@ -3,19 +3,15 @@
 <title>Bookings</title>
 </head>
 <body>
-<?php 
-
-echo phpinfo();
-
- ?>
 <h1>Bookings: </h1>
 
 New Content?
 <?php
 	$result_cache = array();
 	if (isset($_GET['d'])) {
-		include "credentials.php"; 
-		$connection = new mysqli($dbhost, $dbuser, $dbpass, $dbname, 3306);
+		// include "credentials.php"; 
+		// $connection = new mysqli($dbhost, $dbuser, $dbpass, $dbname, 3306);
+		$connection = new mysqli("localhost", "root", "LockDown1", "mabel", 3306);
 		// $con=mysql_connect($dbhost, $dbuser, $dbpass, $dbname);
 			
 		if ($connection->connect_errno > 0) {
@@ -25,7 +21,7 @@ New Content?
 
 
 		$d = strval(intval($_GET['d']));
-		$sql = "SELECT * FROM eje2014_em_bookings LIMIT 0 , " . $d;
+		$sql = "SELECT * FROM ticket LIMIT 0 , " . $d;
 		if (!$result = $connection->query($sql)) {
 		    die ('There was an error running query[' . $connection->error . ']');
 		}
