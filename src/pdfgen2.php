@@ -30,7 +30,7 @@
 		private $myx = 0;
 		private $myy = 0;
 
-		function createSticker($code, $name, $ticket_type) {
+		function createSticker($code, $name, $ticket_type, $account_name) {
 
 			// echo $this->sticker_num;
 			if ($this->sticker_num%21 == 0) {
@@ -48,6 +48,15 @@
 				"$name",
 				0, 0, 'C',
 				false, '', 1, true, 'T', 'C');
+
+			$this->SetXY(3 + $printX, 3 + $printY + 3.5);
+			$this->SetFont('','', 7);
+			$this->Cell($this->sticker_width - 6,
+				$this->sticker_height/3,
+				"Guest of $account_name",
+				0, 0, 'C',
+				false, '', 1, true, 'T', 'C');
+
 			$this->SetXY(3 + $printX, 3 + $printY+ $this->sticker_height/3);
 			$this->SetFont('','B', 9);
 			$this->Cell($this->sticker_width - 6,
@@ -83,19 +92,22 @@
 	function ticket_type($id) {
 		switch ($id) {
 			case 2:
-			case 7:
+			case 3:
+			case 4:
 			case 8:
-			case 11:
 				return "Queue Jump";
 				break;
-			case 9:
-				return "Set-up";			
-			default:
+			
+			case 1:
+			case 5:
+			case 6:
+			case 7:
 				return "Standard";
+			default:
+				return "Unknown";
 				break;
 		}
 	}
-
 	$pdf = new PDF('P', 'mm', 'A4', true, 'UTF-8', false);
 	$pdf->setPrintHeader(false);
 	$pdf->SetAutoPageBreak(false);
@@ -103,7 +115,7 @@
 	$dbhost = "emmajuneevent.com";
 	$dbuser = "root";
 	$dbpass = "LockDown1";
-	$dbname = "eje2014";
+	$dbname = "mabel";
 	$connection = new mysqli($dbhost, $dbuser, $dbpass, $dbname, 3306);
 	$connection->set_charset("utf8");
 	if ($connection->connect_errno > 0) {
@@ -113,24 +125,26 @@
 	if (!$result = $connection->query('SET SESSION group_concat_max_len = 10000;')) {
 		echo 'Could not set group_concat_max_len, so guest lists may be truncated. [' . $connection->error . ']';
 	}
-	$sql = 'SELECT ticket_id, cl_guestlist.booker_id, guest_name, ticket_type_id, status_id, location, IF(guest_name REGEXP \'[0-9]|guest|master\',1,0) AS orderk
-		FROM cl_guestlist
-		JOIN cl_bookers ON cl_guestlist.booker_id = cl_bookers.booker_id
-		WHERE (
-			ticket_id=384 OR 
-			ticket_id=570
+	$sql = "SELECT ticket.id ticket_id, user.id booker_id, user.name account_name, guest_name, ticket.ticket_type_id, status
+		FROM ticket
+		JOIN user ON user.id = ticket.user_id
+		WHERE status=\"CONFIRMED\" AND (
+			
+			user.id<10
+			-- ticket_id=384 OR 
+			-- ticket_id=570
 
-		) ORDER BY orderk ASC, booker_id ASC';
+		) ORDER BY user.id ASC LIMIT 1";
 	
 	if (!$result = $connection->query($sql)) {
 		throw new Exception ('There was an error running query[' . $connection->error . ']');
 	}
-	$data = array();
+
 	while ($row = $result->fetch_array()) {
 		echo $row['ticket_id'] . "\n";
-		$pdf->createSticker(fiveChar($row['booker_id']).fiveChar($row['ticket_id']), $row['guest_name'], ticket_type($row['ticket_type_id']));
+		$pdf->createSticker(fiveChar($row['booker_id']).fiveChar($row['ticket_id']), $row['guest_name'], ticket_type($row['ticket_type_id']), $row['account_name']);
 	}
 
 	//Close and output PDF document
-	$pdf->Output('test.pdf', 'F');
+	$pdf->Output(dirname(__FILE__) . '/barcodes.pdf', 'F');
 ?>
