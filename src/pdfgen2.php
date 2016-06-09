@@ -128,13 +128,14 @@
 	$sql = "SELECT ticket.id ticket_id, user.id booker_id, user.name account_name, guest_name, ticket.ticket_type_id, status
 		FROM ticket
 		JOIN user ON user.id = ticket.user_id
-		WHERE status=\"CONFIRMED\" AND (
+		WHERE status=\"CONFIRMED\" 
+		-- AND (
 			
-			user.id<10
-			-- ticket_id=384 OR 
-			-- ticket_id=570
+		-- 	-- ticket_id=384 OR 
+		-- 	-- ticket_id=570
 
-		) ORDER BY user.id ASC LIMIT 1";
+		-- ) 
+		ORDER BY ticket.id DESC LIMIT 100";
 	
 	if (!$result = $connection->query($sql)) {
 		throw new Exception ('There was an error running query[' . $connection->error . ']');
